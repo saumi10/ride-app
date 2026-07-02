@@ -1,4 +1,4 @@
-# 🚖 Uber-Style Real-Time Driver Matching System
+# Uber-Style Real-Time Driver Matching System
 
 ## About
 
