@@ -53,14 +53,14 @@ public class Ride {
 
     //fare details
     private double estimatedFare;
-    private double actuaFare;
+    private double actualFare;
 
     //timestsamps
     @CreationTimestamp
     private LocalDateTime createdAt;
     @UpdateTimestamp
     private LocalDateTime updatedAt;
-    
+
     private LocalDateTime startedAt;
     private LocalDateTime completedAt;
 }
