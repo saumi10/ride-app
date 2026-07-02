@@ -29,7 +29,7 @@ public class Ride {
 
     @Column(nullable=false)
     private String riderId;
-    @Column(nullable=false)
+    
     private String driverId;
 
     @Column(nullable=false)
