@@ -1,0 +1,23 @@
+package com.rideapp.ride_service.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public class RideRequest {
+    @NotBlank(message = "Rider ID is required")
+    private String riderId;
+
+    @NotNull(message = "pickup latitude is required")
+    private double pickupLatitude;
+    @NotNull(message = "pickup longitude is required")
+    private double pickupLongitude;
+    @NotBlank(message = "pickup address is required")
+    private String pickupAddress;
+
+    @NotNull(message = "drop latitude is required")
+    private double dropLatitude;
+    @NotNull(message = "drop longitude is required")
+    private double dropLongitude;
+    @NotBlank(message = "drop address is required")
+    private String dropAddress;
+}
