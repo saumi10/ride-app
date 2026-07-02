@@ -14,7 +14,7 @@ The project follows a distributed microservices architecture where each service 
 
 - Java 17
 - Spring Boot
-- Spring Cloud OpenFeign
+- Spring RestClient
 - Apache Kafka
 - Redis (Geospatial Indexing)
 - Docker & Docker Compose
@@ -238,7 +238,7 @@ GEODIST drivers:locations "driver:1" "driver:2" km
 - Redis Geospatial Indexing (GEOADD, GEOSEARCH, GEODIST)
 - Asynchronous Event Processing
 - REST APIs with Spring Boot
-- OpenFeign for Inter-Service Communication
+- RestClient for Inter-Service Communication
 - Driver Matching Algorithm
 - Dockerized Local Development
 - Distributed System Design Principles
