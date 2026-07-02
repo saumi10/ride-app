@@ -136,25 +136,31 @@ public class RideService {
     }
 
     private double calculateEstimateFare(RideRequest request){
-        // Simplified Haversine distance calculation
-        double lat1 = Math.toRadians(request.getPickupLatitude());
+        //Simplified Haversine distance calculation
+
+        // Convert to radians - pickup and drop latitudes
+        double lat1 = Math.toRadians(request.getPickupLatitude()); 
         double lat2 = Math.toRadians(request.getDropLatitude());
 
+        // Convert to radians - pickup and drop longitudes
         double lon1 = Math.toRadians(request.getPickupLongitude());
         double lon2 = Math.toRadians(request.getDropLongitude());
 
+        // Calculating the differences
         double dLat = lat2 - lat1;
         double dLon = lon2 - lon1;
 
-        double a =Math.pow(Math.sin(dLat / 2), 2)
+        // Haversine formula to calculate distance in kilometers
+        double a =Math.pow(Math.sin(dLat / 2), 2) // intermediate value
                 +Math.cos(lat1) * Math.cos(lat2)
                 *Math.pow(Math.sin(dLon / 2), 2);
 
-        double c = 2 * Math.asin(Math.sqrt(a));
-        double dustanceKm = 6371 * c;
+        // Calculate the great circle distance in kilometers
+        double c = 2 * Math.asin(Math.sqrt(a)); //angle
+        double distanceKm = 6371 * c;
 
-        //Base fare: 50Rs + 12Rs. perKm
-        double fare = 50 + (dustanceKm * 12);
+        //Base fare assume: 50Rs + 12Rs. perKm
+        double fare = 50 + (distanceKm * 12);
         return Math.round(fare * 100.0) / 100.0;
     }
 
