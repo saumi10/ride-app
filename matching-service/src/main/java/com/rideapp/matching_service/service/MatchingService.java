@@ -25,7 +25,7 @@ public class MatchingService {
     private static final double DEFAULT_SEARCH_RADIUS_KM = 5.0;
 
     /**
-     * Main matching algorithm
+     * Main matching alogorith
      * Called when RideRequestedEvent is consumed from Kafka
      * @param event
      *
