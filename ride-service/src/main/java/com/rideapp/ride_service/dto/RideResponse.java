@@ -3,8 +3,13 @@ package com.rideapp.ride_service.dto;
 import java.time.LocalDateTime;
 
 import com.rideapp.ride_service.model.RideStatus;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class RideResponse {
     private String id;
 
